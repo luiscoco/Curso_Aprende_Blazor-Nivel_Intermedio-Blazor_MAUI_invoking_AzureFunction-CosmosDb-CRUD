@@ -58,6 +58,44 @@ Add the Services
 
 ![image](https://github.com/user-attachments/assets/5f215aa9-093b-417e-a748-9fe503810301)
 
+
+This code defines a service in Blazor WebAssembly that interacts with a set of Azure Functions to perform CRUD (Create, Read, Update, Delete) operations on items stored in a Cosmos DB database
+
+It is structured in a class called CosmosDbService, which uses an HttpClient to send HTTP requests to the Azure Functions endpoints
+
+**Imports**:
+
+**using BlazorWebAssemblyForInvokingAzureFunctionCosmosDBCRUD.Models;**: Refers to the TodoItem model used by the service.
+
+Other imports are for handling HTTP requests, JSON serialization/deserialization, asynchronous tasks, and collections.
+
+**Class CosmosDbService**: This class contains methods that interact with the Azure Function endpoints. It uses a private HttpClient instance (_httpClient) to send HTTP requests and communicate with the server
+
+**FunctionAuthorizationCode**: A constant string containing an authorization code (FunctionAuthorizationCode) used to authenticate requests to the Azure Functions. This code is appended to the query string in each HTTP request
+
+**Constructor**: The constructor takes an HttpClient as a parameter and assigns it to the private _httpClient field, enabling it to be used in the service’s methods
+
+**CRUD Operations**:
+
+**GetItemsAsync**: Sends a GET request to retrieve a list of items (TodoItem) from the Cosmos DB via an Azure Function
+
+Uses the GetFromJsonAsync method to automatically deserialize the JSON response into a list of TodoItem objects
+
+**CreateItemAsync**: Sends a POST request with a new TodoItem object to create a new item in the database. Uses the PostAsJsonAsync method to serialize the newItem object into JSON format.
+Returns true if the item is successfully created, based on the success status of the HTTP response
+
+**GetItemByIdAsync**: Sends a GET request to retrieve a specific TodoItem by its ID from the database. The item ID is passed as part of the URL, and the response is deserialized into a TodoItem object
+
+**UpdateItemAsync**: Sends a PUT request to update an existing TodoItem by ID. The updatedItem is serialized into JSON and sent as part of the request body. Returns true if the update is successful, based on the success status of the HTTP response
+
+**DeleteItemAsync**: Sends a DELETE request to remove a TodoItem by its ID. Returns true if the deletion is successful
+
+**URL and Authorization**:
+
+All methods append the authorization code (FunctionAuthorizationCode) to the query string of the URL to authenticate each request
+
+Overall, this service acts as a bridge between the Blazor WebAssembly front end and the back-end Azure Functions, allowing CRUD operations on a Cosmos DB through HTTP requests
+
 See the **CosmosDbService.cs** source code:
 
 ```csharp
