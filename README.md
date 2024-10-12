@@ -405,5 +405,6 @@ Then press the run button
 
 And see your MAUI application running in your Mobile and also in Visual Studio IDE
 
+![image](https://github.com/user-attachments/assets/d9c374c2-7f75-48a5-addd-ed3fdfd0af3c)
 
-
+![image](https://github.com/user-attachments/assets/19fa5ddb-79b7-4c62-aa92-2fab0ee92d15)
