@@ -103,7 +103,7 @@ namespace BlazorWebAssemblyForInvokingAzureFunctionCosmosDBCRUD.Services
 }
 ```
 
-**IMPORTANT NOTE**: copy from Azure Function the Authorization code
+**IMPORTANT NOTE**: copy from Azure **FunctionAuthorizationCode**
 
 We copy the Azure Function URL
 
