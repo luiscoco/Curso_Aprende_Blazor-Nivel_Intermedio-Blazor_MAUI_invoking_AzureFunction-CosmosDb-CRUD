@@ -179,9 +179,79 @@ private const string FunctionAuthorizationCode = "SWCyUgbqY6yDdAMhmP69EekVukGjwh
 
 ## 5. Add the razor Component
 
-We right click on the Pages folder and select the menu option Add->Razor Component...
+We right click on the Pages folder and select the menu option **Add->Razor Component..**
 
 ![image](https://github.com/user-attachments/assets/1967f380-1f7e-411a-8ecb-9e37f085581b)
+
+This code represents a **Blazor WebAssembly component** for managing a to-do list
+
+It uses an Azure Cosmos DB for storage and follows CRUD (Create, Read, Update, Delete) operations to manage to-do items
+
+**Page and Dependencies**
+
+**@page "/manage-items"**: Sets the URL route for this component to /manage-items
+
+**@using statements**: Import namespaces, including models and services for working with to-do items and Cosmos DB
+
+**@inject CosmosDbService CosmosService**: Injects a service (CosmosDbService) to handle database interactions with Cosmos DB
+
+**Layout of the Component**
+
+**Create a New To-Do Item**:
+
+Uses an ```<EditForm>``` to capture the input fields: name, description, and completion status (IsCompleted)
+
+On form submission (OnValidSubmit), the CreateNewItem method is triggered
+
+A success or failure message is shown after an attempt to create the item
+
+**List Existing Items**:
+
+Displays a list of to-do items fetched from Cosmos DB
+
+Each item shows its name, description, and status (completed or pending)
+
+There are buttons for deleting or editing an item:
+
+**Delete**: Calls the DeleteItem method to remove the item from the database
+
+**Edit**: Enters the edit mode for updating the item
+
+**Update an Existing Item**: A separate section (shown conditionally via isEditMode) is used for updating a selected to-do item
+
+It pre-populates the form with the current item's details and allows updating the fields
+
+The form triggers the UpdateItem method on submission
+
+**Backend Logic (@code { } block)**
+
+**Variables**:
+
+**items**: A list of to-do items fetched from the database
+
+**newItem**: Holds the data for the new to-do item being created
+
+**currentItem**: Holds the item currently being edited
+
+**isEditMode**: A boolean flag to toggle between view and edit modes
+
+createMessage, updateMessage: Store messages displayed after creating or updating items
+
+**Methods**:
+
+**OnInitializedAsync**: Fetches the existing items from Cosmos DB when the page loads
+
+**CreateNewItem**: Generates a new ID, creates the item in Cosmos DB, and refreshes the list
+
+**DeleteItem**: Deletes an item by its ID and refreshes the list
+
+**EditItem**: Fetches the selected item by ID and enters edit mode
+
+**UpdateItem**: Updates the current item in Cosmos DB and exits edit mode
+
+**CancelEdit**: Cancels the update process and exits edit mode
+
+This component provides a complete UI for interacting with a Cosmos DB-backed to-do list, including adding, displaying, updating, and deleting items
 
 We input the new component code
 
