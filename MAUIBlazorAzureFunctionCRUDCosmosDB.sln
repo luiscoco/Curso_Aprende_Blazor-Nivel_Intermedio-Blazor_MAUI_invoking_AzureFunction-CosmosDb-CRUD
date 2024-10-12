@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35323.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUIBlazorAzureFunctionCRUDCosmosDB", "MAUIBlazorAzureFunctionCRUDCosmosDB.csproj", "{DA442398-81DD-4DEB-B9D4-D51FBC9540EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA442398-81DD-4DEB-B9D4-D51FBC9540EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA442398-81DD-4DEB-B9D4-D51FBC9540EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA442398-81DD-4DEB-B9D4-D51FBC9540EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA442398-81DD-4DEB-B9D4-D51FBC9540EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B82F6DFB-982B-409D-9D21-5B0B3935B6FB}
+	EndGlobalSection
+EndGlobal
