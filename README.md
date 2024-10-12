@@ -6,7 +6,25 @@ See the detailed explanation in this publication URL: https://github.com/luiscoc
 
 ## 2. Create a new MAUI Blazor Application (.NET9) with Visual Studio 2022 Community Edition 
 
+Install and Run Visual Studio 2022 and create a new project
 
+![image](https://github.com/user-attachments/assets/81606aa4-2f68-4c80-bea6-7c50573deec8)
+
+Select the MAUI Blazor project template
+
+![image](https://github.com/user-attachments/assets/d368058a-3d2a-4286-8154-e452dda3599c)
+
+Input the project name and location
+
+![image](https://github.com/user-attachments/assets/61ac08e2-05e8-4792-89f0-e1e618dbd66a)
+
+Select the **.NET9** Fraemwork and press the create button
+
+![image](https://github.com/user-attachments/assets/3782ec4c-50ab-4600-acd3-01bc0966e5dc)
+
+This is the project folders and files structure. We added the **Models** and **Services** new folders
+
+![image](https://github.com/user-attachments/assets/b2d5d4b3-8e3d-4334-b34f-90e24d33d160)
 
 ## 3. Add the Data Model
 
