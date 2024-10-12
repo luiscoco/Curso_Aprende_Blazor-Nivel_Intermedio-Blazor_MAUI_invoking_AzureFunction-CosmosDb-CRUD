@@ -1,4 +1,4 @@
-# MAUIBlazorAzureFunctionCRUDCosmosDB
+# How to create a MAUI Blazor Application (.NET9) for invoking an Azure Function with CRUD operations in a Azure CosmosDb
 
 ## 1. Create a new MAUI Blazor Application (.NET9) with Visual Studio 2022 Community Edition 
 
